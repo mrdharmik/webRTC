@@ -1,0 +1,27 @@
+.main-heading {
+    color: red;
+    font-family: system-ui;
+    text-align: center;
+}
+
+.button-create {
+    background-color: red;
+    padding: 10px;
+    border: none;
+    border-radius: 9px;
+    color: black;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #9090ff;
+    border-radius: 10px;
+    width: 20%;
+
+    &:focus {
+        outline: none;
+    }
+}

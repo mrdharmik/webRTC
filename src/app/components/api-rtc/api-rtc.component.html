@@ -1,0 +1,25 @@
+<div id="app">
+    <!-- <p>
+        <img alt="ApiRTC logo" src="./assets/ApiRTC.png" width="66" height="76" /> &
+        <img alt="Angular logo" src="./assets/angular.svg" width="76" height="76" />
+    </p> -->
+    <h1 class="main-heading">Angular API RTC (Video Call)</h1>
+    <hr>
+    <form *ngIf="!conversation" [formGroup]="conversationFormGroup" (ngSubmit)="getOrcreateConversation()">
+        <div>
+            <label>Conversation name : </label>
+            <input type="text" placeholder="Enter Your Name" formControlName="name">
+        </div>
+        <button type="submit" class="button-create" [disabled]="!conversationFormGroup.valid">Get Or Create
+            Conversation</button>
+    </form>
+    <div *ngIf="conversation" class="container">
+        <h3 class="main-heading">---------- Started Calling ----------</h3>
+        <div id="remote-container" class="fullscreen">
+        </div>
+        {{conversation | json}}
+        <div id="local-container" [ngClass]="{'over':remotesCounter>0}">
+            <video #localVideo autoplay playsinline></video>
+        </div>
+    </div>
+</div>

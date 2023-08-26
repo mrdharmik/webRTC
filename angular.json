@@ -32,7 +32,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/@apirtc/apirtc/apiRTC.min.js"
+            ]
           },
           "configurations": {
             "production": {
